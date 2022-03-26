@@ -1,14 +1,22 @@
-class Implicit {
-	void cast(char val) {
-		int v1=val;
+class Tcast {
+	void implicit(char val) {
+		long v1=val;
 		double v2=val;
-		System.out.println("Integer = "+v1+"\nDouble = "+v2);
+		System.out.println("Long = "+v1+"\nDouble = "+v2);
+	}
+	void explicit(double k) {
+		double k1=k;
+		int p=(int)(k1);
+		System.out.println("\nDouble to Integer \n"+ k+" to "+p);
 	}
 }
 public class TypeCasting {
 public static void main(String[] args) {
-	Implicit i=new Implicit();
+	Tcast i=new Tcast();
 	char b='r';
-	i.cast(b);
+	double k=229.12;
+	System.out.println("\t\t  ****Type Casting****");
+	i.implicit(b);
+	i.explicit(k);
 }
 }
