@@ -30,7 +30,7 @@ public class Arithmatic_Calculator {
 public static void main(String[] args) {
 	int a=20,b=10,c=11,d=30;
 	Calculate ca=new Calculate();
-	System.out.println("\t\t\t**Calculator**");
+	System.out.println("\t\t\tArithmatic Calculator");
 	System.out.println(a+" + "+b+" = "+ca.Addition(a, b));
 	System.out.println(a+" - "+c+" = "+ca.Subtraction(a,c));
 	System.out.println(a+" * "+d+" = "+ca.Multiplication(a,d));
