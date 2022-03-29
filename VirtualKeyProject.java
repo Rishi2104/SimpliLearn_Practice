@@ -5,29 +5,29 @@ public class VirtualKeyProject {
 	int n,n1;
 	char c='Y';
 	String[] wl={"W "," E"," L"," C"," O"," M"," E"};
-	String path="C:\\Users\\itish\\eclipse-workspace\\SimpliLearn_Practice_Papers";
+	String path="C:\\Users\\itish\\OneDrive\\Desktop\\FilesTesting";
 	Scanner sc=new Scanner(System.in);
 	System.out.print("\t\t\t");
 	for(String s1:wl) {
 	System.out.print(" "+s1);	
-	Thread.sleep(500);
+	Thread.sleep(400);
 	}
-	Thread.sleep(2000);
+	Thread.sleep(1500);
 	System.out.println("\n\nApplication name : LockedMe.com \n\t\t   -------------");
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	System.out.println("\nDeveloper details:\n--------------------");
 	System.out.println("\tName:RISHI RAJ \n\tEmail: rishi8155@gmail.com\n\tPhone No.:85*********");
-	Thread.sleep(3000);
+	Thread.sleep(1000);
 	System.out.println("\n\t\t***  End of Welcome Page  ***\n");
-	Thread.sleep(2500);
+	Thread.sleep(500);
 	while(c=='y'|| c=='Y') {
 		int nav=0;
 		System.out.println("**Main Menu**\nSelect the Option for which you want to execute:");
-		Thread.sleep(500);
+		Thread.sleep(200);
 		System.out.println("\t1. Retrive the file names in an ascending order");
-		Thread.sleep(500);
+		Thread.sleep(200);
 		System.out.println("\t2. Business-level operations:(Add, Delete, Search and Navigate)");
-		Thread.sleep(500);
+		Thread.sleep(200);
 //		System.out.println("  • Option to add a user specified file to the application"); 
 //		Thread.sleep(500);
 //		System.out.println("  • Option to delete a user specified file from the application");
@@ -35,9 +35,9 @@ public class VirtualKeyProject {
 //		System.out.println("  • Option to search a user specified file from the application");
 //		Thread.sleep(500);
 //		System.out.println("  • Navigation option to close the current execution context and return to the main context");
-		Thread.sleep(500);
+		Thread.sleep(200);
 		System.out.println("\t3. Close the Program");	
-		Thread.sleep(500);
+		Thread.sleep(100);
 		System.out.println("Enter the option:(For Eg.:1,2 or 3) \n");
 		n=sc.nextInt();
 		if(n==1) {
@@ -74,22 +74,32 @@ public class VirtualKeyProject {
 					}
 				}
 				if(flag==0) {
-					
-					FileWriter fw=new FileWriter(fn);
-					fw.write("Welcome to my file...");
-					System.out.println("\nCreated a file named: "+fn);
-					fw.close();
+					File fc=new File(path+"\\"+fn);
+					fc.createNewFile();
+					System.out.println("\nCreated a file named as "+fn);
 				}
 				System.out.println("-------------");
 				break;  
-			case 2:    
+			case 2:  
+				int fg1=0;
 				System.out.println("Enter the file to delete:");
 				String s=sc.next()+".txt";
 				String p=path+"\\"+s;
-				File f=new File(p);
-				if(f.delete())
-					System.out.println(s+" has been delted.\nFile Path = "+p);
-				else
+				File f=new File(path);
+				File fi[]=f.listFiles();
+				for(File e1:fi) {
+					if(e1.getName().equals(s)) {
+						File fd=new File(p);
+						fd.delete();
+						System.out.println(s+" has been delted.\nFile Path = "+p+"\n");
+						fg1++;
+						break;
+					}
+				}
+//				if(f.delete())
+//					System.out.println(s+" has been delted.\nFile Path = "+p);
+//				else
+				if(fg1==0)
 					System.out.println("Failed to delete...\n");
 				break; 
 			case 3:    
