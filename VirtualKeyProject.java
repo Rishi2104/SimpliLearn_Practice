@@ -7,19 +7,19 @@ public class VirtualKeyProject {
 	String[] wl={"W "," E"," L"," C"," O"," M"," E"};
 	String path="C:\\Users\\itish\\OneDrive\\Desktop\\FilesTesting";
 	Scanner sc=new Scanner(System.in);
-	System.out.print("\t\t\t");
+	System.out.print("\n\t\t\t");
 	for(String s1:wl) {
 	System.out.print(" "+s1);	
 	Thread.sleep(400);
 	}
 	Thread.sleep(1500);
-	System.out.println("\n\nApplication name : LockedMe.com \n\t\t   -------------");
+	System.out.println("\n\n\nApplication name : LockedMe.com \n\t\t   -------------");
 	Thread.sleep(1000);
 	System.out.println("\nDeveloper details:\n--------------------");
-	System.out.println("\tName:RISHI RAJ \n\tEmail: rishi8155@gmail.com\n\tPhone No.:85*********");
+	System.out.println("\tRISHI RAJ\n\tCompany Lockers Pvt. Ltd.  \n\tEmail: rishi8155@gmail.com\n\tPhone No.:8544195442");
 	Thread.sleep(1000);
-	System.out.println("\n\t\t***  End of Welcome Page  ***\n");
-	Thread.sleep(500);
+	System.out.println("\n\t\t***  End of the Welcome Page  ***\n\n");
+	Thread.sleep(200);
 	while(c=='y'|| c=='Y') {
 		int nav=0;
 		System.out.println("**Main Menu**\nSelect the Option for which you want to execute:");
@@ -134,7 +134,7 @@ public class VirtualKeyProject {
 				break;
 	}   }
 		else if(n==3) {
-			System.out.println("\n\n Program Terminated...");
+			System.out.println("\n\n Program Terminated...\tTHANK YOU  :) ");
 			System.exit(0);
 		}
 		else
@@ -152,7 +152,7 @@ public class VirtualKeyProject {
 			c='y';
 		else
 		{
-			System.out.println("\n->>Wrong input...Transerred to Main Menu");
+			System.out.println("\n->>Wrong input...Transerred to Main Menu\n");
 			c='y';
 			
 		}
