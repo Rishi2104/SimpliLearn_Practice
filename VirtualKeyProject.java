@@ -23,11 +23,11 @@ public class VirtualKeyProject {
 	while(c=='y'|| c=='Y') {
 		int nav=0;
 		System.out.println("**Main Menu**\nSelect the Option for which you want to execute:");
-		Thread.sleep(200);
+		Thread.sleep(100);
 		System.out.println("\t1. Retrive the file names in an ascending order");
-		Thread.sleep(200);
+		Thread.sleep(100);
 		System.out.println("\t2. Business-level operations:(Add, Delete, Search and Navigate)");
-		Thread.sleep(200);
+		Thread.sleep(100);
 //		System.out.println("  • Option to add a user specified file to the application"); 
 //		Thread.sleep(500);
 //		System.out.println("  • Option to delete a user specified file from the application");
@@ -35,13 +35,13 @@ public class VirtualKeyProject {
 //		System.out.println("  • Option to search a user specified file from the application");
 //		Thread.sleep(500);
 //		System.out.println("  • Navigation option to close the current execution context and return to the main context");
-		Thread.sleep(200);
-		System.out.println("\t3. Close the Program");	
 		Thread.sleep(100);
+		System.out.println("\t3. Close the Program");	
+		Thread.sleep(50);
 		System.out.println("Enter the option:(For Eg.:1,2 or 3) \n");
 		n=sc.nextInt();
 		if(n==1) {
-			System.out.println("File Names: \n------------");
+			System.out.println("File Path: "+path+"\nFile Names: \n------------");
 			File f=new File(path);
 			File filen[]=f.listFiles();
 			for(File ff:filen) {
@@ -82,7 +82,7 @@ public class VirtualKeyProject {
 				break;  
 			case 2:  
 				int fg1=0;
-				System.out.println("Enter the file to delete:");
+				System.out.println("Enter the file to delete:(Please note deleting a file is Case Sensitive)");
 				String s=sc.next()+".txt";
 				String p=path+"\\"+s;
 				File f=new File(path);
@@ -145,11 +145,18 @@ public class VirtualKeyProject {
 		if(nav==0) {
 		System.out.println("Do you want to continue(y/n): ");
 		c=sc.next().charAt(0);
+		System.out.println(c);
 		if(c=='n')
 			System.out.println("\nThank You...");
-		}
-		else
+		else if(c=='y')
 			c='y';
+		else
+		{
+			System.out.println("\n->>Wrong input...Transerred to Main Menu");
+			c='y';
+			
+		}
+		}
 	}
 }
 }
