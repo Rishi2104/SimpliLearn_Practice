@@ -28,14 +28,6 @@ public class VirtualKeyProject {
 		Thread.sleep(100);
 		System.out.println("\t2. Business-level operations:(Add, Delete, Search and Navigate)");
 		Thread.sleep(100);
-//		System.out.println("  • Option to add a user specified file to the application"); 
-//		Thread.sleep(500);
-//		System.out.println("  • Option to delete a user specified file from the application");
-//		Thread.sleep(500);
-//		System.out.println("  • Option to search a user specified file from the application");
-//		Thread.sleep(500);
-//		System.out.println("  • Navigation option to close the current execution context and return to the main context");
-		Thread.sleep(100);
 		System.out.println("\t3. Close the Program");	
 		Thread.sleep(50);
 		System.out.println("Enter the option:(For Eg.:1,2 or 3) \n");
@@ -96,11 +88,8 @@ public class VirtualKeyProject {
 						break;
 					}
 				}
-//				if(f.delete())
-//					System.out.println(s+" has been delted.\nFile Path = "+p);
-//				else
 				if(fg1==0)
-					System.out.println("Failed to delete...\n");
+					System.out.println("File not found...\n");
 				break; 
 			case 3:    
 				File f11=new File(path);
